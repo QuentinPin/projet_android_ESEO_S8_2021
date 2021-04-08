@@ -11,14 +11,16 @@
         android:theme="@style/Theme.Projet_android_ESEO_S8_2021">
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.Projet_android_ESEO_S8_2021_no_actionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:theme="@style/Theme.Projet_android_ESEO_S8_2021_no_actionbar" />
     </application>
 
 </manifest>
