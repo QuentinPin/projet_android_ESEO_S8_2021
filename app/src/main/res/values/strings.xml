@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">projet_android_ESEO_S8_2021</string>
+    <string name="pineau_quentin">Pineau Quentin</string>
+    <string name="date_2020_2021">2020/2021</string>
 </resources>
