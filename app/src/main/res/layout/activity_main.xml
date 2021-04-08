@@ -50,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/main_activity_btn_location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#152349"
@@ -57,6 +58,7 @@
             android:textColor="@color/white" />
 
         <Button
+            android:id="@+id/main_activity_btn_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#152349"

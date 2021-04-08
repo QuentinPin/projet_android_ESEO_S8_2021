@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Window
 import com.example.projet_android_eseo_s8_2021.R
 import com.example.projet_android_eseo_s8_2021.databinding.ActivityMainBinding
+import com.example.projet_android_eseo_s8_2021.ui.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.mainActivityImvSettings.setOnClickListener {
+            startActivity(SettingsActivity.getStartedIntent(this))
+        }
     }
 }
