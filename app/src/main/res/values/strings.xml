@@ -4,5 +4,6 @@
     <string name="date_2020_2021">2020/2021</string>
     <string name="settings">Paramètres</string>
     <string name="localisation">Localisation</string>
-    <string name="historique_des_positions">Historique des positions</string>
+    <string name="history_of_positions">Historique des positions</string>
+    <string name="historical">Historique</string>
 </resources>

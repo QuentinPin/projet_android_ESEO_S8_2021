@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#152349"
-            android:text="@string/historique_des_positions"
+            android:text="@string/history_of_positions"
             android:textColor="@color/white" />
 
     </LinearLayout>
