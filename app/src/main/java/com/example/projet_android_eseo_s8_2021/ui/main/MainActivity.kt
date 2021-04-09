@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import com.example.projet_android_eseo_s8_2021.R
 import com.example.projet_android_eseo_s8_2021.databinding.ActivityMainBinding
+import com.example.projet_android_eseo_s8_2021.ui.localisation.LocalisationActivity
 import com.example.projet_android_eseo_s8_2021.ui.settings.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         //Gestion des clicks bouttons
         binding.mainActivityImvSettings.setOnClickListener {
             startActivity(SettingsActivity.getStartedIntent(this))
+        }
+        binding.mainActivityBtnLocation.setOnClickListener {
+            startActivity(LocalisationActivity.getStartedIntent(this))
         }
 
         startAllAnimation()
