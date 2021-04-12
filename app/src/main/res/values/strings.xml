@@ -6,4 +6,9 @@
     <string name="localisation">Localisation</string>
     <string name="history_of_positions">Historique des positions</string>
     <string name="historical">Historique</string>
+    <string name="settings_of_the_app">Paramètres de l\'App 🛠</string>
+    <string name="settings_of_location">Paramètre de localisation 📍</string>
+    <string name="where_is_eseo">Où est l\'ESEO ? 🚴‍♂</string>
+    <string name="eseo_website">Site de l\'ESEO 🖥</string>
+    <string name="contacte_me">Contacte moi 😎📩</string>
 </resources>
