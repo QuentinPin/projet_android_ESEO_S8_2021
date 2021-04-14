@@ -11,6 +11,7 @@ import android.location.Location
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -135,15 +136,20 @@ class LocalisationActivity : AppCompatActivity() {
         val results = geocoder.getFromLocation(location.latitude, location.longitude, 1)
         if (results.isNotEmpty()) {
             var userAdress = results[0]
-            binding.txtViewAdress?.text = userAdress.getAddressLine(0)
+            binding.txtViewAdress?.text = " " + userAdress.getAddressLine(0)
             var eseoLocation = Location("ESEO")
             eseoLocation.latitude = 47.4933589
             eseoLocation.longitude = -0.5508446
-            binding.txtViewDistance.text = location.distanceTo(eseoLocation).toString() + getText(R.string.meter)
+            binding.txtViewDistance.text =
+                " " + getDistanceInKm(location.distanceTo(eseoLocation)) + getText(R.string.km)
 
             //On enregistre la location pour être afficher dans l'historique
             LocalPreferences.getInstance(this).saveNewLocation(location)
         }
+    }
+
+    private fun getDistanceInKm(distanceInMeter: Float): String {
+        return String.format("%.2f", distanceInMeter * 0.001)
     }
 
     override fun onSupportNavigateUp(): Boolean {

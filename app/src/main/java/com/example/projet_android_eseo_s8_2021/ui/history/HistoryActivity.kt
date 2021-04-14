@@ -39,9 +39,11 @@ class HistoryActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
+        /*Ici on gère le recyclerView pour l'affichage de l'historique de localisation*/
         var rvSettings = binding.historyRecyclerview
         rvSettings.layoutManager = LinearLayoutManager(this)
         var arrayOfLocationItem = arrayListOf<ItemHistoryLocation>()
+        //On récupère toutes les localisations grâce au sharePreference
         LocalPreferences.getInstance(this).getAllLocation().forEach {
             val geocoder = Geocoder(this, Locale.getDefault())
             val results = geocoder.getFromLocation(it.latitude, it.longitude, 1)
@@ -52,13 +54,26 @@ class HistoryActivity : AppCompatActivity() {
                 var historyLocation = Location("historyLocation")
                 historyLocation.latitude = it.latitude
                 historyLocation.longitude = it.longitude
-                arrayOfLocationItem.add(ItemHistoryLocation(results[0].getAddressLine(0),
-                    historyLocation.distanceTo(eseoLocation).toString() + getText(R.string.meter) + " " + getText(R.string.of_eseo)) {
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + it.latitude + "," + it.longitude)))
+                //On ajoute dans la liste des item la localisation récupéré
+                arrayOfLocationItem.add(ItemHistoryLocation(
+                    results[0].getAddressLine(0),
+                    getDistanceInKm(historyLocation.distanceTo(eseoLocation)) + getText(R.string.km) + " " + getText(R.string.of_eseo)
+                ) {
+                    startActivity(
+                        //le clique sur un élément de l'historique ouvre maps sur le point en question
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("geo:" + it.latitude + "," + it.longitude)
+                        )
+                    )
                 })
             }
         }
         rvSettings.adapter = HistoryListAdapter(arrayOfLocationItem)
+    }
+
+    private fun getDistanceInKm(distanceInMeter: Float): String {
+        return String.format("%.2f", distanceInMeter * 0.001)
     }
 
     override fun onSupportNavigateUp(): Boolean {

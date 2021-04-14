@@ -20,5 +20,6 @@
     <string name="refuser">Je refuse</string>
     <string name="dialog_message">Cette permission est nécéssaire pour pouvoire vous géolocaliser.</string>
     <string name="meter">m</string>
+    <string name="km">km</string>
     <string name="of_eseo">de l\'ESEO</string>
 </resources>
