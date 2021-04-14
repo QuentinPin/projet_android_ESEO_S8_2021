@@ -22,4 +22,6 @@
     <string name="meter">m</string>
     <string name="km">km</string>
     <string name="of_eseo">de l\'ESEO</string>
+    <string name="clear_list">Effacer la liste</string>
+    <string name="impossible_no_history">Impossible : aucun historique</string>
 </resources>

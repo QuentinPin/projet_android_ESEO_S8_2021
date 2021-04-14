@@ -5,7 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import android.widget.Toast
 import com.example.projet_android_eseo_s8_2021.R
+import com.example.projet_android_eseo_s8_2021.data.sharepreference.LocalPreferences
 import com.example.projet_android_eseo_s8_2021.databinding.ActivityMainBinding
 import com.example.projet_android_eseo_s8_2021.ui.history.HistoryActivity
 import com.example.projet_android_eseo_s8_2021.ui.localisation.LocalisationActivity
@@ -34,7 +36,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(LocalisationActivity.getStartedIntent(this))
         }
         binding.mainActivityBtnHistory.setOnClickListener {
-            startActivity(HistoryActivity.getStartedIntent(this))
+            if (LocalPreferences.getInstance(this).getAllLocation().size == 0)
+                Toast.makeText(this, getString(R.string.impossible_no_history), Toast.LENGTH_SHORT).show()
+            else
+                startActivity(HistoryActivity.getStartedIntent(this))
         }
 
         startAllAnimation()
@@ -46,14 +51,16 @@ class MainActivity : AppCompatActivity() {
         binding.mainActivityImvSettings.animation = rotateAnimation
 
         //On translate le logo ici
-        val translationXFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.translation_x_from_right_animation)
+        val translationXFromRightAnimation =
+            AnimationUtils.loadAnimation(this, R.anim.translation_x_from_right_animation)
         binding.mainActivityAppLogo.animation = translationXFromRightAnimation
 
         //On translate le bouton 'location' ici
         binding.mainActivityBtnLocation.animation = translationXFromRightAnimation
 
         //On translate le bouton 'location' ici
-        val translationXFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.translation_x_from_left_animation)
+        val translationXFromLeftAnimation =
+            AnimationUtils.loadAnimation(this, R.anim.translation_x_from_left_animation)
         binding.mainActivityBtnHistory.animation = translationXFromLeftAnimation
     }
 }

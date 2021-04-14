@@ -50,4 +50,8 @@ class LocalPreferences private constructor(context: Context) {
             return ArrayList<LocationItem>()
         }
     }
+
+    fun clearAllLocationItemData(){
+        sharedPref.edit().putString("location_history", null).apply()
+    }
 }

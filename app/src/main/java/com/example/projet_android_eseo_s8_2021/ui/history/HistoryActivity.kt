@@ -38,6 +38,11 @@ class HistoryActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
+        //Gestion de l'effacage de la liste des item
+        binding.historyBtnClear.setOnClickListener {
+            LocalPreferences.getInstance(this).clearAllLocationItemData()
+            finish()
+        }
 
         /*Ici on gère le recyclerView pour l'affichage de l'historique de localisation*/
         var rvSettings = binding.historyRecyclerview
