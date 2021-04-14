@@ -53,7 +53,7 @@ class HistoryActivity : AppCompatActivity() {
                 historyLocation.latitude = it.latitude
                 historyLocation.longitude = it.longitude
                 arrayOfLocationItem.add(ItemHistoryLocation(results[0].getAddressLine(0),
-                    historyLocation.distanceTo(eseoLocation).toString() + getText(R.string.meter)) {
+                    historyLocation.distanceTo(eseoLocation).toString() + getText(R.string.meter) + " " + getText(R.string.of_eseo)) {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + it.latitude + "," + it.longitude)))
                 })
             }
