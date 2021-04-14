@@ -11,4 +11,13 @@
     <string name="where_is_eseo">Où est l\'ESEO ? 🚴‍♂</string>
     <string name="eseo_website">Site de l\'ESEO 🖥</string>
     <string name="contacte_me">Contacte moi 😎📩</string>
+    <string name="adress">Adresse : </string>
+    <string name="distance">Distance : </string>
+    <string name="search">Rechercher</string>
+    <string name="dialog_title">Permission</string>
+    <string name="dialog_message_refuser_tout_le_temps">Cette permission est nécéssaire pour pouvoire vous géolocaliser. En cliquand sur "D\'accord" vous serer redirigé vers les paramètres de l\'application pour accepter les permission de géolocalisation.</string>
+    <string name="daccord">D\'accord</string>
+    <string name="refuser">Je refuse</string>
+    <string name="dialog_message">Cette permission est nécéssaire pour pouvoire vous géolocaliser.</string>
+    <string name="meter">m</string>
 </resources>

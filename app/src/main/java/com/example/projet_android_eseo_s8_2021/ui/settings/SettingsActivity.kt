@@ -31,7 +31,7 @@ class SettingsActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
-        var rvSettings = binding.settingsRecyclerview
+        var rvSettings = binding.historyRecyclerview
         rvSettings.layoutManager = LinearLayoutManager(this)
         var arrayOfSetting = arrayOf(
             ItemSetting(
