@@ -12,6 +12,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -50,6 +51,7 @@ class LocalisationActivity : AppCompatActivity() {
         }
         //Gestion des click boutons
         binding.btnSearchLocation?.setOnClickListener {
+            binding.animationView.playAnimation()
             requestPermission()
         }
     }
