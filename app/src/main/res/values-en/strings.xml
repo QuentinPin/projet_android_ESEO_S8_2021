@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">B2S</string>
+    <string name="pineau_quentin">Pineau Quentin</string>
+    <string name="date_2020_2021">2020/2021</string>
+    <string name="settings">Settings</string>
+    <string name="localisation">Localisation</string>
+    <string name="history_of_positions">Position history</string>
+    <string name="historical">History</string>
+    <string name="settings_of_the_app">App settings 🛠</string>
+    <string name="settings_of_location">Localisation settings 📍</string>
+    <string name="where_is_eseo">Where is ESEO ? 🚴‍♂</string>
+    <string name="eseo_website">ESEO website 🖥</string>
+    <string name="contacte_me">Contact me 😎📩</string>
+    <string name="adress">Address :</string>
+    <string name="distance">Distance :</string>
+    <string name="search">Search</string>
+    <string name="dialog_title">Permission</string>
+    <string name="dialog_message_refuser_tout_le_temps">This permission is necessary to be able to geolocate you. By clicking on OK you will be redirected to the application settings to accept geolocation permissions.</string>
+    <string name="daccord">Ok</string>
+    <string name="refuser">I refuse</string>
+    <string name="dialog_message">This permission is necessary to be able to geolocate you.</string>
+    <string name="meter">m</string>
+    <string name="km">km</string>
+    <string name="of_eseo">of ESEO</string>
+    <string name="clear_list">Clear list</string>
+    <string name="impossible_no_history">Impossible: no history</string>
+</resources>
